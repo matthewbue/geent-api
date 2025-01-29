@@ -21,6 +21,8 @@ namespace Geent.Ioc
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IMidiaRepository, MidiaRepository>();
+            services.AddScoped<IMidiaService, MidiaService>();
             return services;
         }
     }

@@ -34,15 +34,7 @@ namespace Geent.Infrastructure.Repositories
             return posts;
         }
 
-        public async Task<List<Midia>> GetAllMidias(int type)
-        {
-            return await _context.Midia.Where(t => t.Type == type).ToListAsync();
-        }
-
-        public async Task<Midia> GetMidiaId(int id)
-        {
-            return await _context.Midia.Where(t => t.Id == id).FirstOrDefaultAsync();
-        }
+        
 
         public async Task<List<Post>> GetAllByUserCreation(string userCreation)
         {

@@ -35,22 +35,7 @@ namespace Geent.Controller
         }
 
 
-        [HttpGet("GetAllMidias")]
-        public async Task<IActionResult> GetAllMidia([FromQuery]int type)
-        {
-            try
-            {
-
-              var midias =   await _postService.GetAllMidias(type);
-
-
-                return Ok(midias);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-        }
+        
 
         [HttpPost("Create")]
         public async Task<IActionResult> Create(Post post)
@@ -67,20 +52,7 @@ namespace Geent.Controller
             }
         }
 
-        [HttpGet("GetMidiaById")]
-        public async Task<IActionResult> GetMidiaById([FromQuery] int id)
-        {
-            try
-            {
-                var midia = await _postService.GetMidiaById(id);
-
-                return Ok(midia);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-        }
+        
 
         [HttpGet("GetAllPostsByUserCreation")]
         public async Task<IActionResult> GetAllByUserCreation([FromQuery] string userCreation)

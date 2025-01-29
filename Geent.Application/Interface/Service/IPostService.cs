@@ -12,8 +12,6 @@ namespace Geent.Application.Interface.Service
     {
         Task CreatePost(Post post);
         Task<List<Post>> GetAll(string userCreation);
-        Task<List<Midia>> GetAllMidias(int type);
-        Task<Midia> GetMidiaById(int id);
         Task<List<PostResponseDto>> GetAllByUserCreation(string userCreation);
 
     }

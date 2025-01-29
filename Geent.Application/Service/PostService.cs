@@ -64,22 +64,5 @@ namespace Geent.Application.Service
             // Retorna a lista como uma Task
             return await Task.FromResult(filteredPosts);
         }
-
-
-        public async Task<List<Midia>> GetAllMidias(int type)
-        {
-
-            var midias = await _postRepository.GetAllMidias(type);
-
-            return midias;
-        }
-
-        public async Task<Midia> GetMidiaById(int id)
-        {
-
-            var midias = await _postRepository.GetMidiaId(id);
-
-            return midias;
-        }
     }
 }

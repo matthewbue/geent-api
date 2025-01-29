@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Geent.Domain.Interface
 {
-    public interface IPostRepository
+    public interface IMidiaRepository
     {
-        Task CreatePost(Post post);
-        Task<List<Post>> GetAll(string userCreation);
+        Task<Midia> GetMidiaId(int id);
+        Task<List<Midia>> GetAllMidias(int type);
     }
 }
